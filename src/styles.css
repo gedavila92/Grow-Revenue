@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050508;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-amber;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl;
+  }
+
+  .section-copy {
+    @apply max-w-3xl text-base leading-8 text-white/[0.68] sm:text-lg;
+  }
+
+  .premium-card {
+    @apply rounded-[10px] border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/25 backdrop-blur-xl transition duration-300;
+  }
+
+  .premium-card:hover {
+    @apply -translate-y-1 border-violet/45 shadow-premium;
+  }
+
+  .primary-btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-[8px] bg-gradient-to-r from-white via-white to-amber/90 px-5 py-3 text-sm font-extrabold text-obsidian shadow-[0_14px_35px_rgba(245,184,75,0.16)] transition duration-300 hover:-translate-y-0.5 hover:shadow-glow;
+  }
+
+  .secondary-btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-[8px] border border-white/[0.18] bg-white/[0.055] px-5 py-3 text-sm font-extrabold text-white shadow-lg shadow-black/10 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:border-amber/70 hover:text-amber;
+  }
+
+  .reveal {
+    animation: fade-up 0.8s ease both;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.device-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
