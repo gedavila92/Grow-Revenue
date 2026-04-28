@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="14" fill="#050508"/>
+  <rect width="64" height="64" rx="14" fill="url(#paint0_radial)"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="-1" fill="white">GR</text>
+  <path d="M12 49H52" stroke="#F5B84B" stroke-width="3" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14 10) rotate(43) scale(73)">
+      <stop stop-color="#B64CFF"/>
+      <stop offset="0.55" stop-color="#5114A6" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#F5B84B" stop-opacity="0.44"/>
+    </radialGradient>
+  </defs>
+</svg>
